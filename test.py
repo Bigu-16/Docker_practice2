@@ -9,13 +9,10 @@ def test_fizzBuzz():
     fizzBuzz(15)
 
     sys.stdout = sys.__stdout__
-    result = output.getvalue().strip().split("\n")
+    result = output.getvalue().strip()
     expected = "FizzBuzz"
     assert result == expected, f"Expected {expected}, but got {result}"
 
 if __name__ == "__main__":
-    print('Enter any number: ')
-    number = int(input())
-    
-    fizzBuzz(number)
+    test_fizzBuzz()
     print("All tests passed!")

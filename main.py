@@ -8,10 +8,3 @@ def fizzBuzz(num):
     else:
         print(str(num))
 
-
-
-if __name__ == "__main__":
-    print('Enter any number: ')
-    number = int(input())
-    
-    fizzBuzz(number)
