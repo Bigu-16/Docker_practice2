@@ -1,5 +1,4 @@
-import io
-import sys
+import pytest
 from main import fizzBuzz
 
 def test_fizzBuzz():
@@ -11,10 +10,5 @@ def test_fizzBuzz():
     ]
 
     for num, expected in test_cases:
-
         result = fizzBuzz(num)
-
         assert result == expected, f"Expected {expected}, but got {result}"
-
-if __name__ == "__main__":
-    test_fizzBuzz()
