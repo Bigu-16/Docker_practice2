@@ -3,16 +3,18 @@ import sys
 from main import fizzBuzz
 
 def test_fizzBuzz():
-    output = io.StringIO()
-    sys.stdout = output
+    test_cases = [
+        (15, "FizzBuzz"),
+        (3, "Fizz"),
+        (5, "Buzz"),
+        (7, "7")
+    ]
 
-    fizzBuzz(15)
+    for num, expected in test_cases:
 
-    sys.stdout = sys.__stdout__
-    result = output.getvalue().strip()
-    expected = "FizzBuzz"
-    assert result == expected, f"Expected {expected}, but got {result}"
+        result = fizzBuzz(num)
+
+        assert result == expected, f"Expected {expected}, but got {result}"
 
 if __name__ == "__main__":
     test_fizzBuzz()
-    print("All tests passed!")

@@ -1,10 +1,10 @@
 def fizzBuzz(num):
     if num % 3 == 0 and num % 5 == 0:
-        print('FizzBuzz')
+        return 'FizzBuzz'
     elif num % 3 == 0:
-        print('Fizz')
+        return 'Fizz'
     elif num % 5 == 0:
-        print('Buzz')
+        return 'Buzz'
     else:
-        print(str(num))
+        return str(num)
 
